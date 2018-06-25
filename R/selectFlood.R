@@ -12,6 +12,15 @@
 #'
 #' @return A list of start and end date times for selected floods
 #'
+#' @import shiny
+#' @import shinycssloaders
+#' @import miniUI
+#' @import dplyr
+#' @import ggplot2
+#' @import DT
+#' @import rlang
+#' @import stringr
+#'
 #' @examples
 #' \dontrun{
 #' selectFloods(df, dateVar = Date, timeVar = Time, QVar = Q)
