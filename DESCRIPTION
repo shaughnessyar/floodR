@@ -1,11 +1,27 @@
-Package: package
+Package: floodR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Tools for Chemical Hydrograph Separations
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors@R: c(
+    person("Andrew", "Shaughnessy", , "andrew.shaughnessy@slu.edu", c("aut", "cre")),
+    person("Christopher", "Prener", , "chris.prener@slu.edu", c("aut")),
+    person("Elizabeth", "Hasenmueller", , "elizabeth.hasenmueller@slu.edu", c("aut"))
+    )
+Description: Functions to aid in chemical hydrograph separations. 
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
+Imports: 
+    dplyr,
+    lubridate,
+    rlang,
+    dataRetrieval,
+    data.table,
+    shiny,
+    miniUI,
+    shinycssloaders,
+    DT,
+    stringr,
+    ggplot2,
+    glue
+RoxygenNote: 6.0.1
