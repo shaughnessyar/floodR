@@ -16,8 +16,8 @@ devtools::install_github("shaughnessyar/floodR")
 
 This package is currently under development, and will be updated as features are completed. 
 
-* Select floods interactively using selector gadget. Status: in develop development
+* Select floods interactively using selector gadget. Status: draft on GitHub
 * Merge water quality data with USGS data. Status: in develop development
-* Hydrograph separations. Status: in develop development
+* Hydrograph separations. Status: draft on GitHub
 
 

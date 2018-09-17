@@ -24,4 +24,4 @@ Imports:
     stringr,
     ggplot2,
     glue
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
