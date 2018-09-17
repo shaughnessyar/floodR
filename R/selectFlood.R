@@ -78,7 +78,7 @@ selectFloods <- function(.data, dateVar = NULL, timeVar = NULL, dateTimeVar = NU
           Q_inpt <- rlang::quo(!! rlang::sym(paramList$QVar))
         }
         x_var <- c(1:nrow(graph_data()))
-        y_var <- graph_data() %>% select(!!Q_inpt)
+        y_var <- graph_data() %>% pull(!!Q_inpt)
         plotData <- as.data.frame(cbind(x_var, y_var))
         p <- ggplot(data = plotData, mapping = aes(x = x_var, y = y_var))+
           geom_line(color = "blue")+
