@@ -89,9 +89,9 @@ fr_separate <- function(.data, dateVar = NULL, timeVar = NULL, dateTimeVar = NUL
   base_dates <- data_frame(starts = starts, base_vals = base_vals)
 
   if(checkOverlap == TRUE){
-    overlap_vec <- map(starts, ~.x %within% interv) %>% map(~length(which(.x == TRUE)))
+    overlap_vec <- map(starts, ~.x %within% interv) %>% purrr::map(~length(which(.x == TRUE)))
     log_check <- overlap_vec %>% unlist() %>% {.>1}
-    non_overlaps <- map_dbl(which(log_check), ~.x - min(.x - which(!log_check)[which(!log_check) < .x]))
+    non_overlaps <- purrr::map_dbl(which(log_check), ~.x - min(.x - which(!log_check)[which(!log_check) < .x]))
     base_vals[which(overlap_vec > 1)] <- base_vals[non_overlaps]
   }
 
