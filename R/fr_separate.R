@@ -86,7 +86,7 @@ fr_separate <- function(.data, dateVar = NULL, timeVar = NULL, dateTimeVar = NUL
     data_frame(times = starts - (hours*60*60))),"times"), roll = "nearest"] %>%
     as_tibble() %>% pull(!!tcr_var)
 
-  base_dates <- data_frame(starts = starts, base_vals = base_vals)
+  base_dates <- data_frame(starts = starts - (hours*60*60), base_vals = base_vals)
 
   if(checkOverlap == TRUE){
     overlap_vec <- map(starts, ~.x %within% interv) %>% purrr::map(~length(which(.x == TRUE)))
